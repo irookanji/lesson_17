@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     testImplementation "io.rest-assured:rest-assured:4.1.2"
+    testImplementation "io.qameta.allure:allure-java-commons:2.13.5"
     testImplementation "io.qameta.allure:allure-rest-assured:2.13.5"
     testImplementation "com.fasterxml.jackson.core:jackson-databind:2.11.2"
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
