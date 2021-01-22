@@ -4,7 +4,7 @@ import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -17,8 +17,8 @@ import static org.hamcrest.Matchers.is;
 @Tag("api")
 public class DemoWebShopTests {
 
-  @BeforeEach
-  void beforeEach() {
+  @BeforeAll
+  public static void setUp() {
     RestAssured.filters(
         new AllureRestAssured(), new RequestLoggingFilter(), new ResponseLoggingFilter());
     RestAssured.baseURI = "http://demowebshop.tricentis.com";
